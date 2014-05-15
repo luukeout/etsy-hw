@@ -3657,22 +3657,38 @@ var items =[
       ]
    }
 ]
-var firstPart = '<div style="background-image: url(';
-var middlePart = ') " class="box"> <div class="views">';
-var lastPart = '</div> </div>'; 
+// var firstPart = '<div style="background-image: url(';
+// var middlePart = ') " class="box"> <div class="views">';
+// var lastPart = '</div> </div>'; 
 
+
+
+   var firstPart = '<div class="container"><img src="';
+   var secondPart = '"><div class="info-bar"> <div class="info">';
+   var thirdPart = '</div> <div class="price">';
+   var lastPart = '</div> </div> </div>';
 
 items.forEach(function(item){
-   
-    var totalString = firstPart + item.Images[0].url_570xN + middlePart + "Item views: " + item.views + lastPart;
-    $('.container').append(totalString);
-})
+   var totalString = firstPart + item.Images[0].url_170x135 + secondPart +item.views + thirdPart + item.price + lastPart; 
+   // return item.Images + item.views + item.price;
+   $('.cool').append(totalString);
+   // console.log(totalString)
+});
 
-// I'm sorry that this is a total fail. I don't understand what I'm doing with this at all. 
-// I don't understand how to structure new content. The above was all done with help from other people,
-// and I understand it to a point. I could go back and do these things with html and css, but I don't get
-// it with jquery. Even what I have here is not really what I would like it to be. 
+
+
+
+// containersole.log(cool)
+   
+    // var totalString = firstPart + item.Images[0].url_570xN + middlePart + "Item views: " + item.views + lastPart;
       
+      
+
+// })
+
+
+
+
       
 // $('.box').click(function() {
 //    $(this).append(
