@@ -1,11 +1,27 @@
-.container {
-	position: relative;
-	margin: 0 auto;
-	width: 340px;
-	height: 270px;
-	background-position: 50% 50%;
-	background: cover;
+/*.body {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+}*/
 
+.items-box {
+	margin: 0 auto;
+	width: 772px;
+}
+
+.pic-container {
+	position: relative;
+	display: inline-block;
+	margin: 8px 8px;
+	width: 370px;
+	/*height: 270px;*/
+	background-position: 50% 50%;
+	/*background: cover;*/
+}
+
+img {
+	width: 370px;
+	height: 254px;
+	border-radius: 4px;
 }
 
 /*.box {
@@ -22,17 +38,23 @@
 */
 
 .info-bar {
+	padding: 0;
 	position: absolute;
-	width: 340px;
+	width: 370px;
 	height: 60px;
 	bottom: 0;
-	background-color: rgb(231, 224, 224);
+	margin-bottom: 4px;
+	background-color: rgb(255, 255, 255);
 	opacity: 0;
 	transition: .5s ease;
+	border-radius: 0px 0px 4px 4px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.25em;
+	font-style: italic;
 }
 
-.container:hover .info-bar {
-	opacity: 0.5;
+.pic-container:hover .info-bar {
+	opacity: 0.8;
 }
 
 /*.info-bar:hover {
@@ -42,17 +64,24 @@
 	position: absolute;
 	left: 5px;
 	color: rgb(15, 15, 162);
-	font-size: 18px;
-	font-style: italic;
+	/*font-size: 18px;
+	font-style: italic;*/
+}
+
+.url {
+	position: absolute;
+	bottom: 3px;
+	left: 5px;
+	font-size: .75em;
 }
 
 .price {
 	position: absolute;
 	bottom: 0;
-	right: 5px;
+	right: 9px;
 	color: rgb(15, 15, 162);
-	font-size: 18px;
-	font-style: italic;
-	background-color: rgb(231, 224, 224);
+	/*font-size: 18px;
+	font-style: italic;*/
+	/*background-color: rgb(231, 224, 224);*/
 }
 

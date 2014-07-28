@@ -3663,15 +3663,16 @@ var items =[
 
 
 
-   var firstPart = '<div class="container"><img src="';
-   var secondPart = '"><div class="info-bar"> <div class="info">';
-   var thirdPart = '</div> <div class="price">';
+   var firstPart = '<div class="pic-container"><img src="';
+   var secondPart = '"><div class="info-bar"> <div class="info">Viewed ';
+   var thirdPart = ' Times</div> <div class="url"><a href="'
+   var fourthPart = '">See on Etsy</a></div> <div class="price">$';
    var lastPart = '</div> </div> </div>';
 
 items.forEach(function(item){
-   var totalString = firstPart + item.Images[0].url_170x135 + secondPart +item.views + thirdPart + item.price + lastPart; 
+   var totalString = firstPart + item.Images[0].url_570xN + secondPart + item.views + thirdPart + item.url + fourthPart + item.price + lastPart; 
    // return item.Images + item.views + item.price;
-   $('.cool').append(totalString);
+   $('.items-box').append(totalString);
    // console.log(totalString)
 });
 
