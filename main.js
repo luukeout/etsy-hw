@@ -3663,18 +3663,47 @@ var items =[
 
 
 
-   var firstPart = '<div class="pic-container"><img src="';
-   var secondPart = '"><div class="info-bar"> <div class="info">Viewed ';
-   var thirdPart = ' Times</div> <div class="url"><a href="'
+   var firstPart  = '<div class="pic-container"><img src="';
+   var secondPart = '"><div class="info-bar"> <div class="views">Viewed ';
+   var thirdPart  = ' Times</div> <div class="url"><a href="';
    var fourthPart = '">See on Etsy</a></div> <div class="price">$';
-   var lastPart = '</div> </div> </div>';
-
+   var lastPart   = '</div> </div> </div>';
+   var description = '<div class="title-description">';
+   var endDescription = '</div>';
+   // $('.title').hide();
 items.forEach(function(item){
    var totalString = firstPart + item.Images[0].url_570xN + secondPart + item.views + thirdPart + item.url + fourthPart + item.price + lastPart; 
-   // return item.Images + item.views + item.price;
+   
    $('.items-box').append(totalString);
+   // $('.title-description').append(this.item.title);
    // console.log(totalString)
+   console.log(item.title)
+   
 });
+
+var titles = []
+items.forEach(function(item){
+   titles.push(item.title)
+})
+
+titles.forEach(function(i){
+   // var description = description + item.title + endDescription;
+   $('.pic-container').mouseover(function() {
+       $('.title-description').text(i)
+   })
+})
+
+console.log(titles)
+
+
+// items.forEach(function(i){
+//    if(i % 2 == 0){
+//       this.$el.css(':hover', 'rgb(250, 15, 81)')
+//    }
+//    // }else{
+//    //    this.$el.css('background', 'red')
+//    // }
+// })
 
 
 
