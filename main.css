@@ -19,6 +19,7 @@ body {
 	/*height: 270px;*/
 	background-position: 50% 50%;
 	/*background: cover;*/
+	cursor: pointer;
 }
 
 img {
@@ -97,6 +98,7 @@ img {
 .pic-container:hover .info-bar {
 	opacity: 0.8;
 	/*visibility: visible;*/
+
 }
 
 /*.info-bar:hover {

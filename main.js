@@ -3663,19 +3663,20 @@ var items =[
 
 
 
-   var firstPart  = '<div class="pic-container"><img src="';
-   var secondPart = '"><div class="info-bar"> <div class="views">Viewed ';
-   var thirdPart  = ' Times</div> <div class="url"><a href="';
-   var fourthPart = '">See on Etsy</a></div> <div class="price">$';
-   var lastPart   = '</div> </div> </div>';
-   var description = '<div class="title-description">';
-   var endDescription = '</div>';
+   var firstPart      = '<div class="pic-container"><img src="';
+   var secondPart     = '"><div class="info-bar"> <div class="views">Viewed ';
+   var thirdPart      = ' Times</div> <div class="url"><a href="';
+   var fourthPart     = '">See on Etsy</a></div> <div class="price">$';
+   var fifthPart      = '</div><div class="title-description">'
+   var lastPart       = '</div> </div> </div> </div>';
+   // var description    = '';
+   // var endDescription = '';
    // $('.title').hide();
 items.forEach(function(item){
-   var totalString = firstPart + item.Images[0].url_570xN + secondPart + item.views + thirdPart + item.url + fourthPart + item.price + lastPart; 
-   
+   var totalString = firstPart + item.Images[0].url_570xN + secondPart + item.views + thirdPart + item.url + fourthPart + item.price + fifthPart + item.title + lastPart; 
+   $('.title-description').hide()
    $('.items-box').append(totalString);
-   // $('.title-description').append(this.item.title);
+   // $('.title-description').append(item.title);
    // console.log(totalString)
    console.log(item.title)
    
@@ -3686,10 +3687,13 @@ items.forEach(function(item){
    titles.push(item.title)
 })
 
-titles.forEach(function(i){
+titles.forEach(function(){
    // var description = description + item.title + endDescription;
+   // $('.title-description').empty()
    $('.pic-container').mouseover(function() {
-       $('.title-description').text(i)
+       // $('.title-description').html('')
+       console.log(this)
+       $('.title-description').append($('.title-description')).show()
    })
 })
 
